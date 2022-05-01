@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-min-view-buffer-index",
-  "version": "0.0.0",
+  "version": "0.0.8",
   "description": "Compute the minimum linear index in an underlying data buffer accessible to an array view.",
   "license": "Apache-2.0",
   "author": {
