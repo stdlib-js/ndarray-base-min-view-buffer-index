@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { ArrayLike } from '@stdlib/types/array';
 
 /**
-* Compute the minimum linear index in an underlying data buffer accessible to an array view.
+* Computes the minimum linear index in an underlying data buffer accessible to an array view.
 *
-* @module @stdlib/ndarray-base-min-view-buffer-index
+* @param shape - array shape
+* @param strides - stride array
+* @param offset - index offset
+* @returns linear index
 *
 * @example
-* var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
-*
 * var shape = [ 10, 10 ];
 * var strides = [ 10, 1 ];
 * var offset = 10;
@@ -34,8 +39,6 @@
 * // returns 10
 *
 * @example
-* var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
-*
 * var shape = [ 10, 10 ];
 * var strides = [ -10, -1 ];
 * var offset = 109;
@@ -44,8 +47,6 @@
 * // returns 10
 *
 * @example
-* var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
-*
 * var shape = [ 10, 10 ];
 * var strides = [ 1, 10 ];
 * var offset = 10;
@@ -54,8 +55,6 @@
 * // returns 10
 *
 * @example
-* var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
-*
 * var shape = [ 10, 10 ];
 * var strides = [ -1, -10 ];
 * var offset = 109;
@@ -63,12 +62,9 @@
 * var idx = minViewBufferIndex( shape, strides, offset );
 * // returns 10
 */
-
-// MODULES //
-
-var minViewBufferIndex = require( './main.js' );
+declare function minViewBufferIndex( shape: ArrayLike<number>, strides: ArrayLike<number>, offset: number ): number; // tslint-disable-line max-line-length
 
 
 // EXPORTS //
 
-module.exports = minViewBufferIndex;
+export = minViewBufferIndex;
