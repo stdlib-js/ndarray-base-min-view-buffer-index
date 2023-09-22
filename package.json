@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "@stdlib/types": "^0.1.0",
-    "@stdlib/utils-library-manifest": "^0.1.0"
+    "@stdlib/utils-library-manifest": "^0.1.0",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-nonnegative-integer": "^0.0.7",
