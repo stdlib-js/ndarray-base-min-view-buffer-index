@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-min-view-buffer-index",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Compute the minimum linear index in an underlying data buffer accessible to an array view.",
   "license": "Apache-2.0",
   "author": {
@@ -39,14 +39,14 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-library-manifest": "^0.0.8"
+    "@stdlib/types": "^0.1.0",
+    "@stdlib/utils-library-manifest": "^0.1.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-nonnegative-integer": "^0.0.7",
-    "@stdlib/bench": "^0.0.12",
-    "@stdlib/ndarray-base-shape2strides": "^0.0.8",
-    "@stdlib/ndarray-base-strides2offset": "^0.0.8",
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/ndarray-base-shape2strides": "^0.1.0",
+    "@stdlib/ndarray-base-strides2offset": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
     "@stdlib/random-base-randu": "^0.0.8",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
