@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@esm/index.mjs';
+import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.1.1-esm/index.mjs';
 ```
 
 #### minViewBufferIndex( shape, strides, offset )
@@ -103,7 +103,7 @@ import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-d
 import shape2strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@esm/index.mjs';
 import strides2offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@esm/index.mjs';
+import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.1.1-esm/index.mjs';
 
 var strides;
 var offset;
