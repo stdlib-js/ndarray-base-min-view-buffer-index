@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,135 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var minViewBufferIndex = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof minViewBufferIndex, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function computes the minimum linear index in an underlying array buffer which is accessible to an array view', function test( t ) {
-	var strides;
-	var offset;
-	var shape;
-	var idx;
-
-	shape = [ 3, 2 ];
-
-	strides = [ 2, 1 ];
-	offset = 0;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ -2, 1 ];
-	offset = 4;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ 2, -1 ];
-	offset = 1;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ -2, -1 ];
-	offset = 5;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ 1, 3 ];
-	offset = 0;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ -1, 3 ];
-	offset = 2;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ 1, -3 ];
-	offset = 3;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ -1, -3 ];
-	offset = 5;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	// 3d array...
-	shape = [ 2, 3, 10 ];
-
-	strides = [ 30, 10, 1 ];
-	offset = 0;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	strides = [ 30, -10, 1 ];
-	offset = 20;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 0, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'the function computes the minimum linear index in an underlying array buffer which is accessible to an array view (buffer offset)', function test( t ) {
-	var strides;
-	var offset;
-	var shape;
-	var idx;
-
-	shape = [ 3, 2 ];
-
-	strides = [ 2, 1 ];
-	offset = 10;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 10, 'returns expected value' );
-
-	strides = [ -2, 1 ];
-	offset = 14;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 10, 'returns expected value' );
-
-	strides = [ 2, -1 ];
-	offset = 11;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 10, 'returns expected value' );
-
-	strides = [ -2, -1 ];
-	offset = 15;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 10, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'the function returns the provided offset when one or more dimensions is zero', function test( t ) {
-	var strides;
-	var offset;
-	var shape;
-	var idx;
-
-	shape = [ 3, 0 ];
-	strides = [ 2, 1 ];
-	offset = 10;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 10, 'returns expected value' );
-
-	shape = [ 0, 2 ];
-	strides = [ -2, 1 ];
-	offset = 14;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 14, 'returns expected value' );
-
-	shape = [ 0, 0 ];
-	strides = [ 2, -1 ];
-	offset = 11;
-	idx = minViewBufferIndex( shape, strides, offset );
-	t.strictEqual( idx, 11, 'returns expected value' );
-
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
