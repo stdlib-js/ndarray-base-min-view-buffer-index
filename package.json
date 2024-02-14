@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-min-view-buffer-index",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Compute the minimum linear index in an underlying data buffer accessible to an array view.",
   "license": "Apache-2.0",
   "author": {
@@ -39,8 +39,8 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.2.0",
-    "@stdlib/utils-library-manifest": "^0.1.1"
+    "@stdlib/types": "^0.3.1",
+    "@stdlib/utils-library-manifest": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-nonnegative-integer": "^0.1.0",
