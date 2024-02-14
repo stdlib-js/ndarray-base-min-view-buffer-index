@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-min-view-buffer-index/tags). For example,
+
+```javascript
 import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.2.0-esm/index.mjs';
 ```
 
@@ -103,7 +108,7 @@ import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-d
 import shape2strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@esm/index.mjs';
 import strides2offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.2.0-esm/index.mjs';
+import minViewBufferIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@esm/index.mjs';
 
 var strides;
 var offset;
