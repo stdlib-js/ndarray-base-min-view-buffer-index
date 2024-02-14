@@ -54,6 +54,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+minViewBufferIndex = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-min-view-buffer-index/tags). For example,
+
+```javascript
 minViewBufferIndex = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.2.0-umd/browser.js' )
 ```
 
@@ -66,7 +71,7 @@ var minViewBufferIndex = require( 'path/to/vendor/umd/ndarray-base-min-view-buff
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -125,7 +130,7 @@ var idx = minViewBufferIndex( shape, strides, offset );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
