@@ -29,7 +29,7 @@ limitations under the License.
   <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
 </details>
 
-# Min View Buffer Index
+# minViewBufferIndex
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-min-view-buffer-index
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-minViewBufferIndex = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var minViewBufferIndex = require( 'path/to/vendor/umd/ndarray-base-min-view-buffer-index/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.minViewBufferIndex;
-})();
-</script>
+var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
 ```
 
 #### minViewBufferIndex( shape, strides, offset )
@@ -117,17 +111,12 @@ var idx = minViewBufferIndex( shape, strides, offset );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-min-view-buffer-index@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var shape2strides = require( '@stdlib/ndarray-base-shape2strides' );
+var strides2offset = require( '@stdlib/ndarray-base-strides2offset' );
+var randu = require( '@stdlib/random-base-randu' );
+var minViewBufferIndex = require( '@stdlib/ndarray-base-min-view-buffer-index' );
 
 var strides;
 var offset;
@@ -160,16 +149,117 @@ for ( i = 0; i < 100; i++ ) {
     idx = minViewBufferIndex( shape, strides, offset );
     console.log( 'Shape: %s. Strides: %s. Offset: %d. Min idx: %d.', shape.join( 'x' ), strides.join( ',' ), offset, idx );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/ndarray/base/min_view_buffer_index.h"
+```
+
+#### stdlib_ndarray_min_view_buffer_index( ndims, \*shape, \*strides, offset )
+
+Computes the minimum linear index (in bytes) in an underlying data buffer accessible to an array view.
+
+```c
+#include <stdint.h>
+
+int64_t ndims = 2;
+int64_t shape[] = { 10, 10 };
+int64_t strides[] = { 10, 1 };
+int64_t offset = 10;
+
+int64_t idx = stdlib_ndarray_min_view_buffer_index( ndims, shape, strides, offset );
+// returns 10
+```
+
+The function accepts the following arguments:
+
+-   **ndims**: `[in] int64_t` number of dimensions.
+-   **shape**: `[in] int64_t*` array shape (dimensions).
+-   **strides**: `[in] int64_t*` array strides (in bytes).
+-   **offset**: `[in] int64_t` index offset.
+
+```c
+int64_t stdlib_ndarray_min_view_buffer_index( const int64_t ndims, const int64_t *shape, const int64_t *strides, const int64_t offset );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/ndarray/base/min_view_buffer_index.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <inttypes.h>
+
+int main( void ) {
+    // Specify the number of dimensions:
+    const int64_t ndims = 2;
+
+    // Define an array shape:
+    const int64_t shape[] = { 10, 10 };
+
+    // Define array strides:
+    const int64_t strides[] = { -2, 5 };
+
+    // Define an offset:
+    const int64_t offset = 100;
+
+    // Compute the minimum accessible index:
+    int64_t idx = stdlib_ndarray_min_view_buffer_index( ndims, shape, strides, offset );
+
+    // Print the results:
+    printf( "idx: %"PRId64"\n", idx );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
