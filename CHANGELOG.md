@@ -4,7 +4,19 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-17)
+## Unreleased (2025-06-18)
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#7395](https://github.com/stdlib-js/stdlib/issues/7395)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +24,7 @@
 
 <details>
 
+-   [`3bc4c9f`](https://github.com/stdlib-js/stdlib/commit/3bc4c9f1bf064e7d07f3b2f62d8d0c3c1a305c05) - **chore:** fix C lint errors [(#7397)](https://github.com/stdlib-js/stdlib/pull/7397) _(by Lokesh Ranjan)_
 -   [`00651e7`](https://github.com/stdlib-js/stdlib/commit/00651e7847283dadfb29ef6c90addd78380a3c5b) - **refactor:** use `const` qualifier and update examples _(by Athan Reines)_
 -   [`2777e4b`](https://github.com/stdlib-js/stdlib/commit/2777e4be161869d09406e3b17947d24c64b47af2) - **bench:** resolve lint errors in benchmarks _(by Athan Reines)_
 
@@ -25,9 +38,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Lokesh Ranjan
 
 </section>
 
